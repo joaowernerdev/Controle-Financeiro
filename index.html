@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8f5">
+  <meta name="description" content="Organize seu dinheiro com clareza. Acompanhe saldo, receitas, despesas, contas, parcelas e metas em um só lugar.">
+  <title>Clareza — sua vida financeira, mais leve</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Clareza, página inicial">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M25.5 8.2a12 12 0 1 0 .4 15.2M25 3.5v7h-7"/></svg></span>
+      <span>clareza<span class="brand-period">.</span></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">
+      <span></span><span></span>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+      <a href="#recursos">Recursos</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#sobre">Sobre</a>
+      <button class="button button-quiet nav-login" type="button" data-open-auth="login">Entrar</button>
+      <button class="button button-dark nav-signup" type="button" data-open-auth="register">Criar minha conta <span aria-hidden="true">↗</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="inicio">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> Um jeito mais tranquilo de cuidar do dinheiro</span>
+        <h1 tabindex="-1">Seu dinheiro merece <span>mais clareza.</span></h1>
+        <p class="hero-lead">Organize o que entra, acompanhe o que sai e planeje o que vem pela frente — sem complicação.</p>
+        <div class="hero-actions">
+          <button class="button button-dark button-large" type="button" data-open-auth="register">Começar gratuitamente <span aria-hidden="true">↗</span></button>
+          <a class="text-link" href="#recursos">Conhecer recursos <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-assurance"><span class="assurance-icon" aria-hidden="true">✓</span> Simples de usar. Seus dados, sob seu controle.</div>
+      </div>
+
+      <div class="hero-visual" aria-label="Prévia do painel financeiro">
+        <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
+        <div class="dashboard-card">
+          <div class="dash-topline"><div><span class="dash-kicker">VISÃO GERAL</span><p class="dash-greeting">Bom dia, Marina <span aria-hidden="true">✳</span></p></div><span class="avatar">M</span></div>
+          <div class="balance-panel">
+            <div class="balance-label">Saldo disponível <span class="eye-icon" aria-hidden="true">◉</span></div>
+            <strong id="hero-balance">Carregando...</strong>
+            <div class="balance-period"><span class="trend-up">↗ 12,8%</span> em relação ao mês passado</div>
+            <svg class="balance-chart" viewBox="0 0 520 92" role="img" aria-label="Gráfico ilustrativo de evolução do saldo"><defs><linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#a7e7ce" stop-opacity=".3"/><stop offset="1" stop-color="#a7e7ce" stop-opacity="0"/></linearGradient></defs><path d="M0 72 C32 68 38 76 67 60 S111 67 138 44 S181 62 210 39 S253 48 280 31 S318 47 349 22 S393 38 420 19 S468 31 520 6 V92 H0Z" fill="url(#chartFill)"/><path d="M0 72 C32 68 38 76 67 60 S111 67 138 44 S181 62 210 39 S253 48 280 31 S318 47 349 22 S393 38 420 19 S468 31 520 6" fill="none" stroke="#a7e7ce" stroke-width="3" stroke-linecap="round"/></svg>
+            <div class="chart-months"><span>JAN</span><span>FEV</span><span>MAR</span><span>ABR</span><span>MAI</span><span>JUN</span></div>
+          </div>
+          <div class="dash-summary">
+            <div class="summary-item"><span class="summary-icon income-icon" aria-hidden="true">↙</span><div><small>Receitas</small><strong id="hero-income">—</strong></div><span class="summary-note">este mês</span></div>
+            <div class="summary-item"><span class="summary-icon expense-icon" aria-hidden="true">↗</span><div><small>Despesas</small><strong id="hero-expense">—</strong></div><span class="summary-note">este mês</span></div>
+          </div>
+          <div class="dash-foot"><span><i class="status-dot"></i> Tudo em dia</span><span>Atualizado agora</span></div>
+        </div>
+        <div class="floating-note"><span class="note-check">✓</span><span><strong>Você está no controle</strong><small>Seu planejamento está em dia</small></span></div>
+        <span class="visual-caption">UMA VISÃO MAIS LEVE DAS SUAS FINANÇAS</span>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Benefícios principais">
+      <div class="trust-inner"><span>Feito para a vida real</span><span class="trust-divider"></span><span>Visão clara do seu mês</span><span class="trust-divider"></span><span>Organização sem planilhas</span><span class="trust-divider"></span><span>No seu ritmo</span></div>
+    </section>
+
+    <section class="section-wrap features-section" id="recursos">
+      <div class="section-heading">
+        <span class="eyebrow">SEU DINHEIRO, POR INTEIRO</span>
+        <h2>Tudo que importa.<br><span>Em um só lugar.</span></h2>
+        <p>Mais do que anotar números: entenda seus hábitos, se prepare para os compromissos e siga em direção aos seus planos.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card feature-balance">
+          <div class="feature-top"><span class="feature-icon icon-green" aria-hidden="true">◒</span><span class="feature-index">01 / VISÃO GERAL</span></div>
+          <h3>Saiba onde você está</h3><p>Veja seu saldo disponível, receitas e despesas do período em uma leitura simples e rápida.</p>
+          <div class="mini-balance"><small>SALDO TOTAL</small><strong id="feature-balance">—</strong><div class="mini-bar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+        </article>
+        <article class="feature-card feature-bills">
+          <div class="feature-top"><span class="feature-icon icon-peach" aria-hidden="true">◷</span><span class="feature-index">02 / SEM SURPRESAS</span></div>
+          <h3>Contas no tempo certo</h3><p>Tenha as próximas contas à vista e saiba o que precisa de atenção antes do vencimento.</p>
+          <div class="bill-preview" id="bill-preview"><span class="skeleton-line"></span><span class="skeleton-line short"></span></div>
+        </article>
+        <article class="feature-card feature-spending">
+          <div class="feature-top"><span class="feature-icon icon-lilac" aria-hidden="true">⌁</span><span class="feature-index">03 / BONS HÁBITOS</span></div>
+          <h3>Entenda seus gastos</h3><p>Organize despesas por categoria e perceba com mais clareza para onde seu dinheiro está indo.</p>
+          <div class="category-preview"><div class="donut" aria-label="Gráfico ilustrativo de categorias"><span>Gastos<br><b>do mês</b></span></div><div class="legend-list"><span><i class="legend-food"></i>Moradia</span><span><i class="legend-home"></i>Alimentação</span><span><i class="legend-other"></i>Outros</span></div></div>
+        </article>
+        <article class="feature-card feature-plans">
+          <div class="feature-top"><span class="feature-icon icon-blue" aria-hidden="true">↗</span><span class="feature-index">04 / OLHO NO FUTURO</span></div>
+          <h3>Planos que saem do papel</h3><p>Acompanhe metas financeiras, parcelas e relatórios para planejar com mais confiança.</p>
+          <div class="goal-preview"><div class="goal-preview-head"><span>Viagem dos sonhos</span><b>68%</b></div><div class="goal-track"><i></i></div><small>R$ 3.400 de R$ 5.000</small></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="dashboard-section" id="painel">
+      <div class="section-wrap dashboard-layout">
+        <div class="dashboard-intro">
+          <span class="eyebrow">SEU MÊS, SEM MISTÉRIO</span>
+          <h2>Uma rotina financeira mais organizada começa com <span>uma boa visão.</span></h2>
+          <p>O painel reúne os detalhes que ajudam você a decidir com mais calma, sem perder de vista o quadro geral.</p>
+          <ul class="check-list"><li><span>✓</span> Receitas e despesas lado a lado</li><li><span>✓</span> Contas e movimentações recentes</li><li><span>✓</span> Um resumo claro, sem excesso de informação</li></ul>
+          <button class="button button-dark" type="button" data-open-auth="register">Quero organizar meu mês <span aria-hidden="true">↗</span></button>
+        </div>
+        <div class="app-preview">
+          <div class="app-sidebar"><div class="app-logo"><span class="brand-mark small-mark"><svg viewBox="0 0 32 32"><path d="M25.5 8.2a12 12 0 1 0 .4 15.2M25 3.5v7h-7"/></svg></span> clareza</div><span class="side-label">MENU</span><a class="side-link active" href="#painel"><span>▦</span> Visão geral</a><a class="side-link" href="#movimentacoes"><span>↕</span> Movimentações</a><a class="side-link" href="#categorias"><span>◉</span> Categorias</a><a class="side-link" href="#parcelas"><span>▤</span> Parcelas</a><a class="side-link" href="#metas"><span>◎</span> Metas</a><a class="side-link" href="#relatorios"><span>▥</span> Relatórios</a><div class="sidebar-bottom"><span class="avatar">M</span><span>Marina Costa<small>Minha conta</small></span></div></div>
+          <div class="app-main">
+            <div class="app-heading"><div><small>QUARTA-FEIRA, 18 DE JUNHO</small><h3>Seu resumo financeiro</h3></div><button class="period-button" type="button" aria-label="Período selecionado">Este mês⌄</button></div>
+            <div class="metric-grid"><div class="metric-card"><span>Saldo disponível</span><strong id="dashboard-balance">—</strong><small class="metric-positive">↗ Seu ponto de partida</small></div><div class="metric-card"><span>Receitas</span><strong id="dashboard-income">—</strong><small>↗ Entradas do período</small></div><div class="metric-card"><span>Despesas</span><strong id="dashboard-expense">—</strong><small>↘ Saídas do período</small></div></div>
+            <div class="app-lower">
+              <section class="app-box movement-box" id="movimentacoes"><div class="box-heading"><div><h4>Últimas movimentações</h4><small>O que aconteceu recentemente</small></div><a href="#movimentacoes">Ver todas ↗</a></div><div class="transaction-list" id="transaction-list"><div class="loading-row">Carregando movimentações...</div></div></section>
+              <section class="app-box due-box"><div class="box-heading"><div><h4>Próximas contas</h4><small>Não deixe passar</small></div><span class="count-badge" id="bill-count">—</span></div><div class="due-list" id="due-list"><div class="loading-row">Carregando contas...</div></div></section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-wrap details-section" id="controle">
+      <div class="section-heading centered-heading"><span class="eyebrow">DA ORGANIZAÇÃO AOS PLANOS</span><h2>Pequenos passos.<br><span>Mais tranquilidade.</span></h2><p>Ferramentas práticas para cuidar do presente e construir o futuro, uma escolha de cada vez.</p></div>
+      <div class="details-grid">
+        <article class="detail-card" id="categorias"><span class="detail-number">01</span><div><h3>Categorias que fazem sentido</h3><p>Agrupe gastos como moradia, alimentação e transporte para identificar padrões e encontrar oportunidades de ajuste.</p></div><span class="detail-symbol">◉</span></article>
+        <article class="detail-card" id="parcelas"><span class="detail-number">02</span><div><h3>Parcelas sem perder a conta</h3><p><span id="installment-summary">Acompanhe compromissos parcelados e saiba quanto ainda falta pagar, sem ser pego de surpresa nos próximos meses.</span></p></div><span class="detail-symbol">▤</span></article>
+        <article class="detail-card" id="metas"><span class="detail-number">03</span><div><h3>Metas com progresso visível</h3><p>Defina um objetivo, acompanhe o que já guardou e mantenha seus planos presentes na rotina.</p></div><span class="detail-symbol">◎</span></article>
+        <article class="detail-card" id="relatorios"><span class="detail-number">04</span><div><h3>Relatórios para decidir melhor</h3><p>Entenda a evolução das receitas e despesas e tenha uma visão organizada do seu comportamento financeiro.</p></div><span class="detail-symbol">▥</span></article>
+      </div>
+    </section>
+
+    <section class="how-section" id="como-funciona">
+      <div class="section-wrap how-layout"><div class="how-copy"><span class="eyebrow">SEM COMPLICAR</span><h2>Começar é mais simples do que parece.</h2><p>Uma rotina leve ajuda a transformar informação em escolhas melhores.</p><button class="button button-light" type="button" data-open-auth="register">Dar o primeiro passo <span aria-hidden="true">↗</span></button></div>
+        <div class="steps"><article class="step"><span class="step-number">01</span><div><h3>Registre o que acontece</h3><p>Anote receitas, despesas, contas e parcelas conforme fazem parte da sua rotina.</p></div></article><article class="step"><span class="step-number">02</span><div><h3>Veja o quadro completo</h3><p>Encontre seus registros organizados por período, categoria e tipo de movimentação.</p></div></article><article class="step"><span class="step-number">03</span><div><h3>Planeje com mais clareza</h3><p>Acompanhe compromissos e metas para fazer escolhas com mais confiança.</p></div></article></div>
+      </div>
+    </section>
+
+    <section class="section-wrap about-section" id="sobre">
+      <div class="about-mark" aria-hidden="true"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="47" fill="none" stroke="#d8e9df" stroke-width="2"/><path d="M80 31a39 39 0 1 0 1 54M79 16v22H57" fill="none" stroke="#287653" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/><circle cx="60" cy="60" r="5" fill="#f0a47e"/></svg></div>
+      <div class="about-copy"><span class="eyebrow">UM PROJETO FEITO PARA A VIDA REAL</span><h2>Mais clareza é mais liberdade para escolher.</h2><p>O Clareza nasceu para deixar o cuidado com o dinheiro mais simples e acessível. Sem julgamentos, sem linguagem complicada: só ferramentas para você entender sua realidade e avançar no seu próprio ritmo.</p><a class="text-link" href="#seguranca">Conheça nosso compromisso <span aria-hidden="true">↓</span></a></div>
+    </section>
+
+    <section class="security-section" id="seguranca"><div class="section-wrap security-layout"><span class="security-icon" aria-hidden="true">⌑</span><div><span class="eyebrow">ORGANIZAÇÃO COM RESPONSABILIDADE</span><h2>Seus dados merecem cuidado.</h2><p>Este protótipo guarda nome, e-mail e lançamentos somente no armazenamento local deste navegador. Não há servidor, envio de e-mail, verificação de senha ou armazenamento seguro. Use apenas dados fictícios; uma versão real precisa de backend, controles de acesso e políticas de privacidade.</p></div><a class="security-link" href="README.md">Entenda como funciona <span aria-hidden="true">↗</span></a></div></section>
+
+    <section class="cta-section"><div class="cta-decoration" aria-hidden="true"></div><div class="cta-content"><span class="eyebrow">SEU PRÓXIMO PASSO COMEÇA AQUI</span><h2>Mais tranquilidade<br>para cuidar do seu dinheiro.</h2><p>Organize suas finanças com mais clareza, no seu tempo.</p><button class="button button-dark button-large" type="button" data-open-auth="register">Começar gratuitamente <span aria-hidden="true">↗</span></button><small>Interface demonstrativa · Sem compromisso</small></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-main section-wrap"><div class="footer-brand"><a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M25.5 8.2a12 12 0 1 0 .4 15.2M25 3.5v7h-7"/></svg></span><span>clareza<span class="brand-period">.</span></span></a><p>Um jeito mais leve de cuidar<br>do seu dinheiro.</p></div><div class="footer-links"><div><strong>Explore</strong><a href="#recursos">Recursos</a><a href="#como-funciona">Como funciona</a><a href="#sobre">Sobre o projeto</a></div><div><strong>Organize-se</strong><a href="#painel">Visão geral</a><a href="#categorias">Categorias</a><a href="#relatorios">Relatórios</a></div><div><strong>Acesse</strong><button type="button" data-open-auth="login">Entrar</button><button type="button" data-open-auth="register">Criar conta</button><a href="README.md">Documentação</a></div></div></div><div class="footer-bottom section-wrap"><span>© 2026 Clareza. Projeto demonstrativo de organização financeira.</span><span>Feito para trazer mais clareza, um dia de cada vez <b>✳</b></span></div></footer>
+
+  <section class="workspace" id="workspace" aria-label="Painel financeiro">
+    <aside class="workspace-sidebar">
+      <a class="brand" href="#" data-screen="overview" aria-label="Clareza, painel inicial"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M25.5 8.2a12 12 0 1 0 .4 15.2M25 3.5v7h-7"/></svg></span><span>clareza<span class="brand-period">.</span></span></a>
+      <span class="side-label">SEU ESPAÇO</span>
+      <nav class="workspace-nav" aria-label="Navegação do painel">
+        <button class="side-link is-active" type="button" data-screen="overview"><span aria-hidden="true">▦</span> Visão geral</button>
+        <button class="side-link" type="button" data-screen="transactions"><span aria-hidden="true">↕</span> Movimentações</button>
+        <button class="side-link" type="button" data-screen="bills"><span aria-hidden="true">◷</span> Contas</button>
+        <button class="side-link" type="button" data-screen="goals"><span aria-hidden="true">◎</span> Metas</button>
+        <button class="side-link" type="button" data-screen="reports"><span aria-hidden="true">▥</span> Relatórios</button>
+        <button class="side-link" type="button" data-screen="settings"><span aria-hidden="true">⚙</span> Minha conta</button>
+      </nav>
+      <div class="sidebar-bottom"><span class="avatar" id="workspace-avatar">C</span><span id="workspace-user">Sua conta<small id="workspace-email">Demonstração local</small></span><button class="signout-button" type="button" id="signout-button">Sair</button></div>
+    </aside>
+    <div class="workspace-main">
+      <header class="workspace-topbar"><button type="button" class="mobile-menu-button" id="mobile-menu-button" aria-label="Abrir navegação" aria-expanded="false">☰</button><div><small class="eyebrow">SEU ESPAÇO FINANCEIRO</small><p id="today-label"></p></div><span class="demo-badge">DEMONSTRAÇÃO LOCAL</span></header>
+      <p class="app-feedback" id="app-feedback" role="status" hidden></p>
+      <main class="workspace-content">
+        <section class="workspace-screen is-visible" id="screen-overview" data-screen-panel="overview">
+          <div class="screen-heading"><div><span class="eyebrow">BEM-VINDA(O) DE VOLTA</span><h1 tabindex="-1">Seu mês, com clareza.</h1><p>Acompanhe suas finanças em um só lugar.</p></div><button class="button button-dark" type="button" data-screen="transactions">+ Nova movimentação</button></div>
+          <div class="metric-grid"><article class="metric-card"><span>Saldo do período</span><strong id="app-balance">R$ 0,00</strong><small>Receitas menos despesas</small></article><article class="metric-card"><span>Receitas</span><strong id="app-income">R$ 0,00</strong><small class="metric-positive">Entradas registradas</small></article><article class="metric-card"><span>Despesas</span><strong id="app-expense">R$ 0,00</strong><small class="metric-negative">Saídas registradas</small></article><article class="metric-card"><span>Contas em aberto</span><strong id="app-bills">0</strong><small>Compromissos a acompanhar</small></article></div>
+          <div class="workspace-grid"><article class="workspace-card"><div class="card-heading"><div><h2>Movimentações recentes</h2><p>Suas últimas receitas e despesas</p></div><button class="text-button" type="button" data-screen="transactions">Ver todas ↗</button></div><div class="data-list" id="recent-transactions"></div></article><article class="workspace-card"><div class="card-heading"><div><h2>Próximas contas</h2><p>O que ainda está por vencer</p></div><button class="text-button" type="button" data-screen="bills">Ver contas ↗</button></div><div class="data-list" id="upcoming-bills"></div></article></div>
+        </section>
+        <section class="workspace-screen" id="screen-transactions" data-screen-panel="transactions">
+          <div class="screen-heading"><div><span class="eyebrow">ENTRADAS E SAÍDAS</span><h1>Movimentações</h1><p>Registre e acompanhe o que acontece com seu dinheiro.</p></div></div>
+          <div class="workspace-card"><h2>Adicionar movimentação</h2><form class="entry-form" id="transaction-form"><label>Descrição<input name="description" maxlength="70" placeholder="Ex.: Mercado" required></label><label>Valor (R$)<input name="amount" type="number" min="0.01" step="0.01" placeholder="0,00" required></label><label>Tipo<select name="type"><option value="expense">Despesa</option><option value="income">Receita</option></select></label><label>Categoria<select name="category"><option>Moradia</option><option>Alimentação</option><option>Transporte</option><option>Saúde</option><option>Lazer</option><option>Salário</option><option>Outros</option></select></label><label>Data<input name="date" type="date" required></label><button class="button button-dark" type="submit">Adicionar</button></form></div>
+          <article class="workspace-card table-card"><div class="card-heading"><div><h2>Todas as movimentações</h2><p>Registros salvos neste navegador</p></div></div><div class="table-wrap"><table><thead><tr><th>Descrição</th><th>Categoria</th><th>Data</th><th>Tipo</th><th>Valor</th><th></th></tr></thead><tbody id="transactions-table"></tbody></table></div></article>
+        </section>
+        <section class="workspace-screen" id="screen-bills" data-screen-panel="bills">
+          <div class="screen-heading"><div><span class="eyebrow">COMPROMISSOS EM DIA</span><h1>Contas</h1><p>Organize vencimentos e acompanhe o que já foi pago.</p></div></div>
+          <div class="workspace-card"><h2>Adicionar conta</h2><form class="entry-form" id="bill-form"><label>Nome da conta<input name="description" maxlength="70" placeholder="Ex.: Internet" required></label><label>Valor (R$)<input name="amount" type="number" min="0.01" step="0.01" placeholder="0,00" required></label><label>Categoria<input name="category" maxlength="40" placeholder="Ex.: Casa" required></label><label>Vencimento<input name="date" type="date" required></label><button class="button button-dark" type="submit">Adicionar conta</button></form></div>
+          <article class="workspace-card table-card"><div class="card-heading"><div><h2>Suas contas</h2><p>Marque as contas que já foram pagas</p></div></div><div class="table-wrap"><table><thead><tr><th>Conta</th><th>Categoria</th><th>Vencimento</th><th>Valor</th><th>Status</th><th></th></tr></thead><tbody id="bills-table"></tbody></table></div></article>
+        </section>
+        <section class="workspace-screen" id="screen-goals" data-screen-panel="goals">
+          <div class="screen-heading"><div><span class="eyebrow">SEUS PLANOS, PASSO A PASSO</span><h1>Metas financeiras</h1><p>Defina um objetivo e acompanhe seu progresso.</p></div></div>
+          <div class="workspace-card"><h2>Criar uma meta</h2><form class="entry-form" id="goal-form"><label>Nome da meta<input name="name" maxlength="60" placeholder="Ex.: Viagem" required></label><label>Valor desejado (R$)<input name="target" type="number" min="0.01" step="0.01" placeholder="0,00" required></label><label>Já guardado (R$)<input name="saved" type="number" min="0" step="0.01" value="0"></label><button class="button button-dark" type="submit">Criar meta</button></form></div>
+          <div class="goal-grid" id="goals-list"></div>
+        </section>
+        <section class="workspace-screen" id="screen-reports" data-screen-panel="reports">
+          <div class="screen-heading"><div><span class="eyebrow">UM OLHAR SOBRE SEUS HÁBITOS</span><h1>Relatórios</h1><p>Entenda como suas receitas e despesas se distribuem.</p></div></div>
+          <div class="workspace-card report-card"><h2>Despesas por categoria</h2><div id="category-report" class="report-list"></div></div>
+          <div class="workspace-card report-summary"><div><span>Total de receitas</span><strong id="report-income">R$ 0,00</strong></div><div><span>Total de despesas</span><strong id="report-expense">R$ 0,00</strong></div><div><span>Resultado</span><strong id="report-balance">R$ 0,00</strong></div></div>
+        </section>
+        <section class="workspace-screen" id="screen-settings" data-screen-panel="settings">
+          <div class="screen-heading"><div><span class="eyebrow">SEU PERFIL LOCAL</span><h1>Minha conta</h1><p>Atualize seu nome e e-mail neste navegador.</p></div></div>
+          <div class="workspace-card"><h2>Dados do perfil</h2><form class="entry-form account-form" id="profile-form"><label>Nome<input name="name" maxlength="80" autocomplete="name" required></label><label>E-mail<input name="email" type="email" autocomplete="email" required></label><button class="button button-dark" type="submit">Salvar perfil</button></form></div>
+          <div class="workspace-card"><h2>Alterar senha</h2><p class="account-help">Tela demonstrativa: não existe autenticação e nenhuma senha é validada ou salva.</p><form class="entry-form account-form" id="password-form"><label>Senha atual<input name="current" type="password" minlength="8" autocomplete="current-password" required></label><label>Nova senha<input name="password" type="password" minlength="8" autocomplete="new-password" required></label><label>Confirme a nova senha<input name="confirm" type="password" minlength="8" autocomplete="new-password" required></label><button class="button button-dark" type="submit">Simular alteração</button></form></div>
+          <div class="workspace-card danger-zone"><h2>Dados neste navegador</h2><p class="account-help">Apague o perfil, as movimentações, as contas e as metas salvas localmente.</p><button class="button button-quiet" type="button" id="clear-data-button">Apagar dados locais</button></div>
+        </section>
+        <aside class="local-data-note"><strong>Protótipo local:</strong> informações ficam somente neste navegador. Não use senhas, dados bancários ou informações sensíveis. Não há servidor, envio de e-mail ou autenticação real.</aside>
+      </main>
+    </div>
+  </section>
+
+  <div class="auth-overlay" id="auth-modal" aria-hidden="true">
+    <section class="auth-dialog" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+      <button class="modal-close" type="button" aria-label="Fechar janela">×</button>
+      <a class="brand modal-brand" href="#inicio"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M25.5 8.2a12 12 0 1 0 .4 15.2M25 3.5v7h-7"/></svg></span><span>clareza<span class="brand-period">.</span></span></a>
+      <span class="eyebrow">SEU PRÓXIMO PASSO</span><h2 id="auth-title">Bem-vinda de volta.</h2><p class="auth-description">Entre para continuar organizando sua vida financeira.</p>
+      <div class="auth-tabs" role="tablist" aria-label="Entrar ou criar conta"><button type="button" role="tab" id="tab-login" aria-selected="true" data-auth-tab="login">Entrar</button><button type="button" role="tab" id="tab-register" aria-selected="false" data-auth-tab="register">Criar conta</button></div>
+      <form id="auth-form"><label for="auth-name" id="name-label" hidden>Seu nome</label><input id="auth-name" name="name" type="text" autocomplete="name" placeholder="Como podemos chamar você?" hidden><label for="auth-email">E-mail</label><input id="auth-email" name="email" type="email" autocomplete="email" placeholder="voce@email.com" required><label for="auth-password">Senha</label><input id="auth-password" name="password" type="password" autocomplete="current-password" placeholder="Pelo menos 8 caracteres" minlength="8" required><label for="auth-confirm" id="confirm-label" hidden>Confirme sua senha</label><input id="auth-confirm" name="confirm" type="password" autocomplete="new-password" placeholder="Digite a senha novamente" minlength="8" hidden><button class="button button-dark auth-submit" type="submit">Entrar <span aria-hidden="true">↗</span></button><button class="auth-text-button" type="button" id="forgot-link">Esqueci minha senha</button><p class="auth-notice" id="auth-notice" role="status">Demonstração: não use uma senha real. Ela não será verificada nem armazenada.</p></form>
+      <form id="recovery-form" hidden><label for="recovery-email">E-mail da conta</label><input id="recovery-email" name="email" type="email" autocomplete="email" placeholder="voce@email.com" required><button class="button button-dark auth-submit" type="submit">Continuar</button><button class="auth-text-button" type="button" data-auth-back>Voltar para entrar</button><p class="auth-notice" role="status">Fluxo de demonstração: nenhum e-mail será enviado.</p></form>
+      <form id="reset-form" hidden><label for="reset-code">Código de recuperação (simulado)</label><input id="reset-code" name="code" autocomplete="one-time-code" placeholder="Código de exemplo" required><label for="reset-password">Nova senha</label><input id="reset-password" name="password" type="password" autocomplete="new-password" minlength="8" placeholder="Pelo menos 8 caracteres" required><label for="reset-confirm">Confirme a nova senha</label><input id="reset-confirm" name="confirm" type="password" autocomplete="new-password" minlength="8" placeholder="Digite novamente" required><button class="button button-dark auth-submit" type="submit">Salvar nova senha</button><p class="auth-notice" role="status">Nenhuma senha será salva nesta demonstração.</p></form>
+      <div class="recovery-result" id="recovery-result" hidden><p class="auth-notice" id="recovery-message" role="status"></p><button class="button button-dark auth-submit" type="button" id="simulate-reset">Simular abertura do link</button><button class="auth-text-button" type="button" data-auth-back>Voltar para entrar</button></div>
+      <div class="auth-privacy"><span aria-hidden="true">⌑</span> Seus dados são importantes. Esta demonstração não os transmite.</div>
+    </section>
+  </div>
+</body>
+</html>
